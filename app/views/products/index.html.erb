@@ -9,6 +9,10 @@ $(function() {
     $.get("/products/" + id + "/description", function(description) {
       $("#body-" + id).text(description);
     });
+    $.get("/products/" + id + "/inventory", function(inventory) {
+      let availability = "<p>Sold Out</p>";
+      $("#body-" + id).append(availability);
+    });
   });
 });
 </script>
