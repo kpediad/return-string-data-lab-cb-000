@@ -9,13 +9,6 @@ $(function () {
     $.get("/products/" + id + "/description", function(desc) {
       // Replace text of body-id div
       $("#body-" + id).html("<p>FATE SKATA</p>");
-      $.get("/products/" + id + "/inventory", function(avail) {
-        if (avail === "true") {
-          $("#body-" + id).html("<p>" + desc + " - Available</p>");
-        } else {
-          $("#body-" + id).html("<p>" + desc + " - Sold Out</p>");
-        }
-      });
     });
   });
 });
