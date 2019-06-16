@@ -8,7 +8,7 @@ $(function () {
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(desc) {
       // Replace text of body-id div
-      $("#body-" + id).text(desc);
+      $("#body-" + id).html(desc);
     });
     $.get("/products/" + id + "/inventory", function(avail) {
       if (avail === "true") {
