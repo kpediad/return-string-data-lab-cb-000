@@ -14,7 +14,8 @@ $(function() {
       if(inventory === "false"){
         inventoryText = " - Sold Out";
       }
-      $("#body-" + id).append(inventoryText);
+      let existingText = $("#body-" + id).text();
+      $("#body-" + id).text(existingText + inventoryText);
     });
   });
 });
