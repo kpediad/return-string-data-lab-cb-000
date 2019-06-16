@@ -7,7 +7,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
-Capybara.default_max_wait_time = 20
+Capybara.default_max_wait_time = 60
 # Add additional requires below this line. Rails is not loaded until this point!
 
 if RUBY_VERSION>='2.6.0'
