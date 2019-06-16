@@ -4,7 +4,10 @@ class ProductsController < ApplicationController
   end
 
   def new
+<<<<<<< HEAD
     @product = Product.new
+=======
+>>>>>>> 978e883bef88b8be0e5c671c5f7578e2f2b2e077
   end
 
   def create
