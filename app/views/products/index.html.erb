@@ -9,12 +9,6 @@ $(function() {
     $.get("/products/" + id + "/description", function(description) {
       $("#body-" + id).text(description);
     });
-    $.get("/products/" + id + "/inventory", function(inventory) {
-      var inventoryText = " - Available";
-      if(inventory === "false"){
-        inventoryText = " - Sold Out";
-      }
-    });
   });
 });
 </script>
