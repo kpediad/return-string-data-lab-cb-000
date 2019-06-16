@@ -8,12 +8,11 @@ $(function () {
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(desc) {
       // Replace text of body-id div
-      $("#body-" + id).text(desc);
       $.get("/products/" + id + "/inventory", function(avail) {
         if (avail === "true") {
-          $("#body-" + id).append(" - Available");
+          $("#body-" + id).text(desc + " - Available");
         } else {
-          $("#body-" + id).append(" - Sold Out");
+          $("#body-" + id).text(desc + " - Sold Out");
         }
       });
     });
