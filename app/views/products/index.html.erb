@@ -10,7 +10,6 @@ $(function() {
       $("#body-" + id).text(description);
     });
     $.get("/products/" + id + "/inventory", function(inventory) {
-      let availability = "<p>Sold Out</p>";
     });
   });
 });
