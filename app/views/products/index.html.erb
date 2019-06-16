@@ -9,13 +9,13 @@ $(function () {
     $.get("/products/" + id + "/description", function(description) {
       // Replace text of body-id div
       $("#body-" + id).text(description);
-    });
-    $.get("/products/" + id + "/inventory", function(available) {
-      if (available === "true") {
-        $("#body-" + id).append(" - Available");
-      } else {
-        $("#body-" + id).append(" - Sold Out");
-      }
+      $.get("/products/" + id + "/inventory", function(available) {
+        if (available === "true") {
+          $("#body-" + id).append(" - Available");
+        } else {
+          $("#body-" + id).append(" - Sold Out");
+        }
+      });
     });
   });
 });
