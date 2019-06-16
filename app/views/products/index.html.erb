@@ -10,6 +10,7 @@ $(function() {
       $("#body-" + id).text(description);
     });
     $.get("/products/" + id + "/inventory", function(inventory) {
+      $("#body-" + id).append(inventory);
     });
   });
 });
