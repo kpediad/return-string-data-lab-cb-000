@@ -10,11 +10,10 @@ $(function () {
       // Replace text of body-id div
       $.get("/products/" + id + "/inventory", function(avail) {
         if (avail === "true") {
-          $("#body-" + id).text(desc + " - Available");
+          $("#body-" + id).html("<p>" + desc + " - Available</p>");
         } else {
-          $("#body-" + id).text(desc + " - Sold Out");
+          $("#body-" + id).html("<p>" + desc + " - Sold Out</p>");
         }
-        console.log(desc)
       });
     });
   });
