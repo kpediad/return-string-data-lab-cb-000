@@ -11,11 +11,6 @@ $(function () {
       $("#body-" + id).text(description);
     });
     $.get("/products/" + id + "/inventory", function(available) {
-      if (available === "true") {
-        $("#body-" + id).append(" - Available");
-      } else {
-        $("#body-" + id).append(" - Sold Out");
-      }
     });
   });
 });
